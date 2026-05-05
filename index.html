@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تطبيقي الجديد</title>
     
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
     
     <meta name="theme-color" content="#317EFB"/>
     
@@ -21,13 +21,13 @@
 <body>
 
     <h1>أهلاً بيك في تطبيق الويب بتاعنا!</h1>
-    <p>الموقع ده دلوقتي جاهز إنه ينزل كـ Web App على جهازك.</p>
+    <p>الموقع ده دلوقتي جاهز إنه ينزل كـ Web App من على جيت هاب.</p>
 
     <script>
-        // كود تشغيل الـ Service Worker عشان التطبيق يقدر يشتغل Offline
+        // كود تشغيل الـ Service Worker بمسار نسبي
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
+                navigator.serviceWorker.register('sw.js')
                 .then(registration => {
                     console.log('الـ Service Worker اشتغل بنجاح:', registration.scope);
                 })
